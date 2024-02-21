@@ -18,7 +18,8 @@ const prodErrorResponse = (res, error)=>{
 
 const devErrorResponse = (res, error)=>{
     console.log(error);
-    res.status(error.statusCode).json({
+    // error.statusCode ("500") is depricated please use res.status(500)
+    res.status(500).json({
         statusCode: error.statusCode,
         status: error.status,
         message: error.message,

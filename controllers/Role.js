@@ -7,12 +7,7 @@ export const createRole = async (req, res, next) =>{
 
         res.status(200).json({
             content:{
-                data:{
-                    id: role._id,
-                    name: role.name,
-                    created_at: role.createdAt,
-                    updated_at: role.updatedAt
-                }
+                data:role
             }
         })
     }
